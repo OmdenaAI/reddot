@@ -9,7 +9,7 @@ import objectpath
 with open("bddjson2.json") as datafile:    
 	myData = json.load(datafile)
 
-json_tree = objectpath.Tree(myData['caption'])
+json_tree = objectpath.Tree(myData['data'])
 result_tuple = tuple(json_tree.execute('$..caption'))
 
 dataset = ""
