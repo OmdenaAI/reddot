@@ -200,11 +200,9 @@ def extract_topn_from_vector(feature_names, sorted_items, topn=10):
 
 doc = ""
 for i in range(0, 20): 
-
-	# fetch document for which keywords needs to be extracted
 	doc=doc + corpus[i]
 
-#generate tf-idf for the given document
+#generate tf-idf
 tf_idf_vector=tfidf_transformer.transform(cv.transform([doc]))
 
 #sort the tf-idf vectors by descending order of scores
